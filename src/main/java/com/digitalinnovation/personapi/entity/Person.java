@@ -27,12 +27,12 @@ public class Person {
     private String lastName;
 
     @Column(nullable = false, unique = true)
-    private int cpf;
+    private String cpf;
 
     private LocalDate birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.PERSIST, CascadeType.REMOVE})
-    private List<PhoneNumber> phoneNumber;
+    private List<PhoneNumber> phones;
 
 
 }
