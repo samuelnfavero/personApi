@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
@@ -22,7 +23,7 @@ public class PersonDTO {
     private Long id;
 
     @NotEmpty
-    @Size(min=2, max = 50)
+    @Size(min=2, max = 100)
     private String firstName;
 
     @NotEmpty
