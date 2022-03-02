@@ -1,13 +1,13 @@
 package com.digitalinnovation.personapi.controller;
 
 import com.digitalinnovation.personapi.dto.MessageResponseDTO;
-import com.digitalinnovation.personapi.entity.Person;
-import com.digitalinnovation.personapi.repository.Repository;
+import com.digitalinnovation.personapi.dto.request.PersonDTO;
 import com.digitalinnovation.personapi.service.PersonService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @CrossOrigin
 @RestController
@@ -15,12 +15,14 @@ public class PersonController {
 
     PersonService personService;
 
+    @Autowired
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
 
     @PostMapping("/post")
-    public MessageResponseDTO post(@RequestBody Person person){
-        return personService.postPerson(person);
+    @ResponseStatus(HttpStatus.CREATED)
+    public MessageResponseDTO post(@RequestBody @Valid PersonDTO personDTO){
+        return personService.postPerson(personDTO);
     }
 }
