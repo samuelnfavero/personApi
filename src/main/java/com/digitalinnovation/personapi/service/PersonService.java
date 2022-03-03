@@ -24,11 +24,8 @@ public class PersonService {
     }
 
     public MessageResponseDTO postPerson(PersonDTO personDTO){
-
         Person person = personMapper.toModel(personDTO);
-
         Person savedPerson = personRepository.save(person);
-
         return getMessage(savedPerson, " salvo com sucesso.");
     }
 
