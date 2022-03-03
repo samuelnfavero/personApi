@@ -44,4 +44,9 @@ public class PersonController {
         return personService.findPersonById(id);
     }
 
+    @PutMapping
+    public MessageResponseDTO update(@RequestBody PersonDTO personDTO) throws PersonNotFoundException {
+        return personService.updatePerson(personDTO);
+    }
+
 }
