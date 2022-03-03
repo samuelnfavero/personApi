@@ -2,7 +2,8 @@ package com.digitalinnovation.personapi.controller;
 
 import com.digitalinnovation.personapi.dto.response.MessageResponseDTO;
 import com.digitalinnovation.personapi.dto.request.PersonDTO;
-import com.digitalinnovation.personapi.entity.Person;
+import com.digitalinnovation.personapi.exception.DeleteException;
+import com.digitalinnovation.personapi.exception.FindByIdException;
 import com.digitalinnovation.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,5 +32,15 @@ public class PersonController {
     @GetMapping("/listAll")
     public List<PersonDTO> listAll(){
         return personService.listAllPeople();
+    }
+
+    @DeleteMapping("/delete")
+    public MessageResponseDTO delete(Long id) throws DeleteException {
+        return personService.deletePerson(id);
+    }
+
+    @GetMapping("/findbyid")
+    public PersonDTO findById(Long id) throws FindByIdException {
+        return personService.findPersonById(id);
     }
 }
