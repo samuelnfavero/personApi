@@ -14,19 +14,23 @@ de teste H2. São armazenados os seguintes atributos:</p>
 </ul>
 
 <p>Para executar o projeto no terminal, digite o seguinte comando:</p><br>
+
 ```
 mvn spring-boot:run
 ```
 <p>Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:</p><br>
+
 ```
 http://localhost:8080/personapi
 ```
 <p>Link do projeto no Heroku:<br>
+
 ```
 https://peopleeapi.herokuapp.com/personapi
 ```
 <h2>Teste dos métodos com Postman</h2>
 <h3>Post<h3>
+
 ```
 Tipo de rquisição: POST
 {
@@ -43,24 +47,28 @@ Tipo de rquisição: POST
 }
 ```
 <h3>ListAll<h3>
+
 ```
 Tipo de rquisição: GET
 
 URL: localhost:8080/personapi
 ```
 <h3>FindById<h3>
+
 ```
 Tipo de rquisição: GET
 
 URL: localhost:8080/personapi/1
 ```
 <h3>Delete<h3>
+
 ```
 Tipo de rquisição: DELETE
 
 URL: localhost:8080/personapi/1
 ```
 <h3>Update<h3>
+
 ```
 Tipo de rquisição: PUT
 
