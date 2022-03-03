@@ -1,6 +1,6 @@
 <h1>ApiRest de gerenciamento de pessoas com SpringBoot </h1>
-Neste projeto foi desenvolvidas uma ApiRest de gerenciamento de pessoas com persistência realizada em banco de dados
-de teste H2. São armazenados os seguintes atributos:
+<p>Neste projeto foi desenvolvidas uma ApiRest de gerenciamento de pessoas com persistência realizada em banco de dados
+de teste H2. São armazenados os seguintes atributos:</p>
 <ul>
     <li>Nome Completo</li>
     <li>CPF</li>
@@ -13,21 +13,21 @@ de teste H2. São armazenados os seguintes atributos:
     </ul>
 </ul>
 
-Para executar o projeto no terminal, digite o seguinte comando:<br>
+<p>Para executar o projeto no terminal, digite o seguinte comando:</p><br>
 ```
 mvn spring-boot:run
 ```
-Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:<br>
+<p>Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:</p><br>
 ```
 http://localhost:8080/personapi
 ```
-Link do projeto no Heroku:<br>
-````
+<p>Link do projeto no Heroku:<br>
+```
 https://peopleeapi.herokuapp.com/personapi
-````
+```
 <h2>Teste dos métodos com Postman</h2>
 <h3>Post<h3>
-````
+```
 Tipo de rquisição: POST
 {
     "firstName": "Samuel",
@@ -41,27 +41,27 @@ Tipo de rquisição: POST
     }
     ]
 }
-````
+```
 <h3>ListAll<h3>
-````
+```
 Tipo de rquisição: GET
 
 URL: localhost:8080/personapi
-````
+```
 <h3>FindById<h3>
-````
+```
 Tipo de rquisição: GET
 
 URL: localhost:8080/personapi/1
-````
+```
 <h3>Delete<h3>
-````
+```
 Tipo de rquisição: DELETE
 
 URL: localhost:8080/personapi/1
-````
+```
 <h3>Update<h3>
-````
+```
 Tipo de rquisição: PUT
 
 URL: localhost:8080/personapi
@@ -82,7 +82,7 @@ Body:
         }
     ]
 }
-````
+```
 <h1>
 <a href="https://www.linkedin.com/in/samuelfavero/">Linkedin<a>
 </h1>
