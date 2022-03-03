@@ -2,8 +2,7 @@ package com.digitalinnovation.personapi.controller;
 
 import com.digitalinnovation.personapi.dto.response.MessageResponseDTO;
 import com.digitalinnovation.personapi.dto.request.PersonDTO;
-import com.digitalinnovation.personapi.exception.DeleteException;
-import com.digitalinnovation.personapi.exception.FindByIdException;
+import com.digitalinnovation.personapi.exception.PersonNotFoundException;
 import com.digitalinnovation.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +13,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/personapi")
 public class PersonController {
 
     PersonService personService;
@@ -23,24 +23,25 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @PostMapping("/post")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO post(@RequestBody @Valid PersonDTO personDTO){
         return personService.postPerson(personDTO);
     }
 
-    @GetMapping("/listAll")
+    @GetMapping
     public List<PersonDTO> listAll(){
         return personService.listAllPeople();
     }
 
-    @DeleteMapping("/delete")
-    public MessageResponseDTO delete(Long id) throws DeleteException {
+    @DeleteMapping("/{id}")
+    public MessageResponseDTO delete(@PathVariable Long id) throws PersonNotFoundException {
         return personService.deletePerson(id);
     }
 
-    @GetMapping("/findbyid")
-    public PersonDTO findById(Long id) throws FindByIdException {
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
         return personService.findPersonById(id);
     }
+
 }
