@@ -30,6 +30,7 @@ https://peopleeapi.herokuapp.com/personapi
 ```
 <h2>Teste dos métodos com Postman</h2>
 <h3>Post<h3>
+<p></p>
 
 ```
 Tipo de rquisição: POST
@@ -45,7 +46,9 @@ Tipo de rquisição: POST
     }
     ]
 }
+
 ```
+
 <h3>ListAll<h3>
 
 ```
