@@ -28,12 +28,12 @@ http://localhost:8080/personapi
 ```
 https://peopleeapi.herokuapp.com/personapi
 ```
-<h2>Teste dos métodos com Postman</h2>
-<h3>Post<h3>
-<p></p>
+<h1>Teste dos métodos com Postman</h1>
+<p><b>Post</b><p>
+
 
 ```
-Tipo de rquisição: POST
+Tipo de requisição: POST
 {
     "firstName": "Samuel",
     "lastName": "Nascimento Fávero",
@@ -49,36 +49,38 @@ Tipo de rquisição: POST
 
 ```
 
-<h3>ListAll<h3>
+<p><b>ListAll</b></p>
 
 ```
-Tipo de rquisição: GET
+Tipo de requisição: GET
 
 URL: localhost:8080/personapi
 ```
-<h3>FindById<h3>
+
+<p><b>FindById</b></p>
 
 ```
-Tipo de rquisição: GET
+Tipo de requisição: GET
 
 URL: localhost:8080/personapi/1
 ```
-<h3>Delete<h3>
+
+<p><b>Delete</b></p>
 
 ```
-Tipo de rquisição: DELETE
+Tipo de requisição: DELETE
 
 URL: localhost:8080/personapi/1
 ```
-<h3>Update<h3>
+<p><b>Update</b></p>
 
-```
-Tipo de rquisição: PUT
+Tipo de requisição: `PUT`
 
-URL: localhost:8080/personapi
+URL: `localhost:8080/personapi`
 
 Body:
 
+```
 {
     "id": 1,
     "firstName": "Samuel",
