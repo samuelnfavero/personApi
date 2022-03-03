@@ -42,22 +42,24 @@ public class PersonService {
     }
 
     public MessageResponseDTO deletePerson(Long id) throws PersonNotFoundException {
-        try {
-            personRepository.deleteById(id);
-        } catch(Exception e){
-            throw new PersonNotFoundException(id);
-        }
+        getPerson(id);
+        personRepository.deleteById(id);
         return MessageResponseDTO.builder().message("Deletado com sucesso!").build();
     }
 
     public PersonDTO findPersonById(Long id) throws PersonNotFoundException {
-        PersonDTO personDTO;
+        Person person = getPerson(id);
+        return personMapper.toDTO(person);
+    }
+
+    private Person getPerson(Long id) throws PersonNotFoundException {
+        Person person;
         try {
-            personDTO = personMapper.toDTO(personRepository.findById(id).get());
+            person = personRepository.findById(id).get();
         }catch(Exception e){
             throw new PersonNotFoundException(id);
         }
-        return personDTO;
+        return person;
     }
 
 
