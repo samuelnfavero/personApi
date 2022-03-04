@@ -36,7 +36,7 @@ Tipo de requisição: POST
 {
     "firstName": "Samuel",
     "lastName": "Nascimento Fávero",
-    "cpf": "13515900646",
+    "cpf": "56040105968",
     "birthDate": "01-07-1996",
     "phones": [
         {
@@ -96,5 +96,5 @@ Body:
 }
 ```
 <h1>
-<a href="https://www.linkedin.com/in/samuelfavero/">Linkedin<a>
+<a href="https://www.linkedin.com/in/samuelfavero/">Linkedin</a>
 </h1>
