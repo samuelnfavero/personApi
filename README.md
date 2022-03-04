@@ -5,7 +5,6 @@ de teste H2. São armazenados os seguintes atributos:</p>
     <li>Nome Completo</li>
     <li>CPF</li>
     <li>Data de aniversário</li>
-    <li>Data do cadastro</li>
     <li>Telefone: </li>
     <ul>
     <li>Tipo</li>
